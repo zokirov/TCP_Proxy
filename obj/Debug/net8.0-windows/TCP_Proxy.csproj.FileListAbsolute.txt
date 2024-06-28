@@ -1,0 +1,16 @@
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\bin\Debug\net8.0-windows\TCP_Proxy.exe
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\bin\Debug\net8.0-windows\TCP_Proxy.deps.json
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\bin\Debug\net8.0-windows\TCP_Proxy.runtimeconfig.json
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\bin\Debug\net8.0-windows\TCP_Proxy.dll
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\bin\Debug\net8.0-windows\TCP_Proxy.pdb
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.MainForm.resources
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.csproj.GenerateResource.cache
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.GeneratedMSBuildEditorConfig.editorconfig
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.AssemblyInfoInputs.cache
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.AssemblyInfo.cs
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.csproj.CoreCompileInputs.cache
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.dll
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\refint\TCP_Proxy.dll
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.pdb
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\TCP_Proxy.genruntimeconfig.cache
+D:\CODE\repo\TCP_Proxy\TCP_Proxy\obj\Debug\net8.0-windows\ref\TCP_Proxy.dll
