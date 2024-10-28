@@ -36,7 +36,7 @@
             tb_message = new TextBox();
             tb_server = new TextBox();
             b_send = new Button();
-            b_sendClient = new Button();
+            rb_terminal = new RichTextBox();
             SuspendLayout();
             // 
             // b_startserver
@@ -49,7 +49,7 @@
             b_startserver.TabIndex = 0;
             b_startserver.Text = "StartServer";
             b_startserver.UseVisualStyleBackColor = true;
-            b_startserver.Click += b_startserver_Click;
+            b_startserver.Click += startServer;
             // 
             // tb_port
             // 
@@ -79,7 +79,7 @@
             rb_log.Location = new Point(8, 207);
             rb_log.Margin = new Padding(2);
             rb_log.Name = "rb_log";
-            rb_log.Size = new Size(1061, 383);
+            rb_log.Size = new Size(492, 383);
             rb_log.TabIndex = 3;
             rb_log.Text = "";
             // 
@@ -93,7 +93,7 @@
             b_connect.TabIndex = 4;
             b_connect.Text = "Connect server";
             b_connect.UseVisualStyleBackColor = true;
-            b_connect.Click += b_connect_Click;
+            b_connect.Click += connect;
             // 
             // tb_message
             // 
@@ -125,30 +125,28 @@
             b_send.TabIndex = 8;
             b_send.Text = "Send Message";
             b_send.UseVisualStyleBackColor = true;
-            b_send.Click += b_send_Click;
+            b_send.Click += sendMessage;
             // 
-            // b_sendClient
+            // rb_terminal
             // 
-            b_sendClient.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            b_sendClient.Location = new Point(251, 111);
-            b_sendClient.Margin = new Padding(2);
-            b_sendClient.Name = "b_sendClient";
-            b_sendClient.Size = new Size(214, 74);
-            b_sendClient.TabIndex = 8;
-            b_sendClient.Text = "Send to client";
-            b_sendClient.UseVisualStyleBackColor = true;
-            b_sendClient.Click += b_sendClient_Click;
+            rb_terminal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            rb_terminal.Location = new Point(516, 207);
+            rb_terminal.Margin = new Padding(2);
+            rb_terminal.Name = "rb_terminal";
+            rb_terminal.Size = new Size(492, 383);
+            rb_terminal.TabIndex = 3;
+            rb_terminal.Text = "";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1077, 595);
-            Controls.Add(b_sendClient);
             Controls.Add(b_send);
             Controls.Add(tb_server);
             Controls.Add(tb_message);
             Controls.Add(b_connect);
+            Controls.Add(rb_terminal);
             Controls.Add(rb_log);
             Controls.Add(lb_port);
             Controls.Add(tb_port);
@@ -156,7 +154,7 @@
             Margin = new Padding(2);
             Name = "MainForm";
             Text = "MainForm";
-            FormClosing += MainForm_FormClosing;
+            FormClosing += formClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,6 +169,6 @@
         private TextBox tb_message;
         private TextBox tb_server;
         private Button b_send;
-        private Button b_sendClient;
+        private RichTextBox rb_terminal;
     }
 }
