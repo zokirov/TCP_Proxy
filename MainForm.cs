@@ -50,10 +50,12 @@ namespace TCP_Proxy
             Invoke(action);
         }
 
+        TcpClient clientServer;
+
         public void HandleClient(object obj)
         {
-            TcpClient client = (TcpClient)obj;
-            NetworkStream stream = client.GetStream();
+            clientServer = (TcpClient)obj;
+            NetworkStream stream = clientServer.GetStream();
 
             byte[] buffer = new byte[1024];
             int bytesRead;
@@ -71,7 +73,7 @@ namespace TCP_Proxy
                 stream.Write(responseData, 0, responseData.Length);
             }
 
-            client.Close();
+            clientServer.Close();
 
             InvokeUI(() =>
             {
@@ -112,10 +114,6 @@ namespace TCP_Proxy
             {
                 rb_log.AppendText("Error: " + ex.Message + "\n");
             }
-            finally
-            {
-                client.Close();
-            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -150,9 +148,33 @@ namespace TCP_Proxy
             {
                 rb_log.AppendText("Error: " + ex.Message + "\n");
             }
-            finally
+        }
+
+        private void b_sendClient_Click(object sender, EventArgs e)
+        {
+            // Send the message to the client
+            try
             {
-                client.Close();
+                rb_log.AppendText("Send to server.\n");
+
+                NetworkStream stream = clientServer.GetStream();
+                string message = tb_message.Text;
+                byte[] data = Encoding.ASCII.GetBytes(message);
+                stream.Write(data, 0, data.Length);
+
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
+                {
+                    string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    rb_log.AppendText("Server: " + response + "\n");
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                rb_log.AppendText("Error: " + ex.Message + "\n");
             }
         }
     }

@@ -36,6 +36,7 @@
             tb_message = new TextBox();
             tb_server = new TextBox();
             b_send = new Button();
+            b_sendClient = new Button();
             SuspendLayout();
             // 
             // b_startserver
@@ -126,11 +127,24 @@
             b_send.UseVisualStyleBackColor = true;
             b_send.Click += b_send_Click;
             // 
+            // b_sendClient
+            // 
+            b_sendClient.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            b_sendClient.Location = new Point(251, 111);
+            b_sendClient.Margin = new Padding(2);
+            b_sendClient.Name = "b_sendClient";
+            b_sendClient.Size = new Size(214, 74);
+            b_sendClient.TabIndex = 8;
+            b_sendClient.Text = "Send to client";
+            b_sendClient.UseVisualStyleBackColor = true;
+            b_sendClient.Click += b_sendClient_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1077, 595);
+            Controls.Add(b_sendClient);
             Controls.Add(b_send);
             Controls.Add(tb_server);
             Controls.Add(tb_message);
@@ -157,5 +171,6 @@
         private TextBox tb_message;
         private TextBox tb_server;
         private Button b_send;
+        private Button b_sendClient;
     }
 }
