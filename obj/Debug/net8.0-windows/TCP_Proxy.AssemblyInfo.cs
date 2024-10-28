@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TCP_Proxy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aec2aca2bbb5784da2b9c85487fecb6d0e588f66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3185a28a9a61c6f6d459add18ed3eb7cecc23ad3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TCP_Proxy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TCP_Proxy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

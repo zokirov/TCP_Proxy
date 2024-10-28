@@ -72,13 +72,6 @@ namespace TCP_Proxy
                 byte[] responseData = Encoding.ASCII.GetBytes("Echo: " + data);
                 stream.Write(responseData, 0, responseData.Length);
             }
-
-            clientServer.Close();
-
-            InvokeUI(() =>
-            {
-                rb_log.AppendText("Client disconnected.\n");
-            });
         }
 
         TcpClient client;
